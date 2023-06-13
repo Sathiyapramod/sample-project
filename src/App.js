@@ -1,5 +1,5 @@
 import "./App.css";
-import "./styles.modules.scss";
+import "./styles.modules.scss";  //default master styling sheet using scss
 import Topbar from "./Components/Navbar/Topbar";
 import Sidebar from "./Components/Sidebar/Sidebar";
 import Main from "./Components/Main/Main";
