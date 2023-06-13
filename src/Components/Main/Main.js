@@ -2,13 +2,9 @@ import React from "react";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import { Select } from "@mui/material";
-// import { DateField } from "@mui/x-date-pickers";
-// import { LocalizationProvider } from "@mui/x-date-pickers";
-// import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-// import dayjs from "dayjs";
-import "./Main.scss";
 import Graph from "../Graphs/Graph";
 import MyTable from "../Graphs/Table";
+import "./Main.scss"
 
 function Main() {
   return (

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Switch from "@mui/material/Switch";
 import { Chip, Table, TablePagination } from "@mui/material";
 import { TableBody, TableCell, TableHead, TableRow } from "@mui/material";
+import Checkbox from "@mui/material/Checkbox";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 const rows = [
   {
@@ -55,7 +57,7 @@ const rows = [
     Revenue: 5966,
     CurrentBid: 8,
     Conv: 1.5,
-  }
+  },
 ];
 
 function MyTable() {
@@ -71,10 +73,14 @@ function MyTable() {
     setPage(0);
   };
   return (
-    <div style={{ height: 400, width: "100%", backgroundColor: "#FFFFFF" }}>
-      <Table>
+    <>
+      <Table style={{ height: 400, width: "100%", backgroundColor: "#FFFFFF" }}>
         <TableHead>
           <TableRow>
+            <TableCell>
+              <Checkbox />
+            </TableCell>
+
             <TableCell>Status</TableCell>
             <TableCell>Campaign Name</TableCell>
             <TableCell>Info</TableCell>
@@ -93,6 +99,9 @@ function MyTable() {
           {rows.map((element, index) => {
             return (
               <TableRow key={index}>
+                <TableCell>
+                  <Checkbox />
+                </TableCell>
                 <TableCell>{element.Status}</TableCell>
                 <TableCell>{element.CampaignName}</TableCell>
                 <TableCell>
@@ -123,7 +132,7 @@ function MyTable() {
                 </TableCell>
                 <TableCell>${element.Budget}</TableCell>
                 <TableCell>
-                  <a rel="noreferrer" href="#">
+                  <a rel="noreferrer" href="1">
                     {element.BiddingStrategy}
                   </a>
                 </TableCell>
@@ -131,7 +140,9 @@ function MyTable() {
                 <TableCell>${element.Revenue}</TableCell>
                 <TableCell>${element.CurrentBid}</TableCell>
                 <TableCell>{element.Conv}%</TableCell>
-                <TableCell></TableCell>
+                <TableCell>
+                  <MoreVertIcon />
+                </TableCell>
               </TableRow>
             );
           })}
@@ -145,7 +156,7 @@ function MyTable() {
         onPageChange={handleChangePage}
         onRowsPerPageChange={handleChangeRowsPerPage}
       />
-    </div>
+    </>
   );
 }
 
