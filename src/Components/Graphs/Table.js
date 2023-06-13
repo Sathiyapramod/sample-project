@@ -82,8 +82,8 @@ function MyTable() {
             </TableCell>
             <TableCell>Status</TableCell>
             <TableCell>Campaign Name</TableCell>
-            <TableCell>Info</TableCell>
-            <TableCell>Automation</TableCell>
+            <TableCell sx={{ width: 120 }}>Info</TableCell>
+            <TableCell sx={{ width: 120 }}>Automation</TableCell>
             <TableCell>Dayparting</TableCell>
             <TableCell>Budget</TableCell>
             <TableCell>Bidding Strategy</TableCell>
