@@ -3,6 +3,10 @@
   flex-direction: row;
 }
 
+%base-padding{
+  padding: 1rem 0 1rem 0;
+}
+
 .wrapper-content {
   width: 100vw;
   min-height: 100vh;
@@ -48,6 +52,7 @@
 .content-graph {
   min-height: 100vh;
   @extend %base-display;
+  @extend %base-padding;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
