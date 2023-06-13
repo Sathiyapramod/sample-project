@@ -76,10 +76,10 @@ function Graph() {
               yAxisId="left"
               type="monotone"
               dataKey="revenue"
-              stroke="#8884d8"
+              stroke="#7c1158"
               activeDot={{ r: 8 }}
             />
-            <Bar yAxisId="right" dataKey="cost" fill="#82ca9d" barSize={20} />
+            <Bar yAxisId="right" dataKey="cost" fill="#00bfa0" barSize={20} />
           </ComposedChart>
         </div>
       </div>
@@ -149,7 +149,7 @@ function Graph() {
               stroke="#8884d8"
               activeDot={{ r: 8 }}
             />
-            <Bar yAxisId="right" dataKey="cost" fill="#82ca9d" barSize={20} />
+            <Bar yAxisId="right" dataKey="cost" fill="#bd7ebe" barSize={20} />
           </ComposedChart>
         </div>
       </div>
