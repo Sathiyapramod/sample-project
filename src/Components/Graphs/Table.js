@@ -80,7 +80,6 @@ function MyTable() {
             <TableCell>
               <Checkbox />
             </TableCell>
-
             <TableCell>Status</TableCell>
             <TableCell>Campaign Name</TableCell>
             <TableCell>Info</TableCell>
@@ -146,16 +145,21 @@ function MyTable() {
               </TableRow>
             );
           })}
+          <TableRow align="center">
+            <TableCell colSpan={13}>
+              {" "}
+              <TablePagination
+                rowsPerPageOptions={[3, 4, 5]}
+                count={rows.length}
+                rowsPerPage={rowsPerPage}
+                page={page}
+                onPageChange={handleChangePage}
+                onRowsPerPageChange={handleChangeRowsPerPage}
+              />
+            </TableCell>
+          </TableRow>
         </TableBody>
       </Table>
-      <TablePagination
-        rowsPerPageOptions={[3, 4, 5]}
-        count={rows.length}
-        rowsPerPage={rowsPerPage}
-        page={page}
-        onPageChange={handleChangePage}
-        onRowsPerPageChange={handleChangeRowsPerPage}
-      />
     </>
   );
 }
