@@ -63,3 +63,8 @@
   padding: 0.5rem 0 0.5rem 0;
   font-weight: bold;
 }
+
+input[type="date"] {
+  border: 1px solid lightgrey;
+  position: relative;
+}
