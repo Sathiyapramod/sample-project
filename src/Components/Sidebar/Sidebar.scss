@@ -1,16 +1,26 @@
+$menu-selected-color: #77469b;
+
+%base-display {
+  display: flex;
+  flex-direction: row;
+}
+
+%column-display {
+  display: flex;
+  flex-direction: column;
+}
+
 .sidebar {
   width: 10rem;
   background-color: #ffffff;
   scroll-behavior: smooth;
 }
 .sidebar-icon {
-  display: flex;
-  flex-direction: row;
+  @extend %base-display;
   justify-content: flex-start;
 }
 .sidebar-menu {
-  display: flex;
-  flex-direction: column;
+  @extend %column-display;
   justify-content: flex-start;
 }
 .menu-item {
@@ -23,19 +33,19 @@
   font-size: 10px;
   word-wrap: break-word;
   font-weight: bolder;
-  color: #77469b;
+  color: $menu-selected-color;
   cursor: pointer;
 }
 
 .menu {
-  display: flex;
-  flex-direction: row;
+  @extend %base-display;
   justify-content: flex-start;
   align-items: center;
   gap: 0.5rem;
 }
+
 .menu:active {
-  border-left-color: #77469b;
+  border-left-color: $menu-selected-color;
   border-left-width: 2rem;
 }
 .menu-icon {
@@ -48,7 +58,7 @@
 .menu-icon-selected {
   width: 1.5rem;
   height: 1.5rem;
-  background-color: #77469b;
+  background-color: $menu-selected-color;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -58,20 +68,19 @@ ul {
     list-style-type: none;
   }
   padding: 0 0 0 1rem;
-  display: flex;
-  flex-direction: column;
+  @extend %column-display;
   justify-content: flex-start;
   gap: 1rem;
 }
 
 .menu-icon:hover {
-  background-color: #77469b;
+  background-color: $menu-selected-color;
 }
 .menu-item:hover {
   font-weight: bolder;
-  color: #77469b;
+  color: $menu-selected-color;
 }
 .bi-badge-ad {
-  color: white;
+  color: #ffffff;
   font-size: 0.9rem;
 }
